@@ -3,26 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>IMC</title>
+  <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #9200cc;
+    }
+
+    form {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    form div {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #7a00cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004c99;
+    }
+
+    #resultado {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+  </style>
 </head>
+
 <body>
+
     <h1>Cálculo IMC</h1>
     <form action="/resul" method="post">
       <div class="nome">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome"/>
       </div>
+
       <div class="alt">
         <label for="altura">Altura(cm):</label>
         <input type="number" name="altura" id="altura"/>
       </div>
+
       <div class="peso">
         <label for="peso">Peso (Kg):</label>
         <input type="text" name="peso" id="peso"/>
       </div>
+
       <button>Calcular</button>
-  </form>
+
+    </form>
+    
   <div id="resultado"></div>
+
 </body>
+
 </html>
